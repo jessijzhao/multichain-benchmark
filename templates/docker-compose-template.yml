@@ -1,0 +1,38 @@
+masternode:
+    build: ./templates/master
+    stdin_open: true
+    tty: true
+    ports:
+        - 7557:7557
+        - 8002:8002
+    environment:
+        CHAINNAME: MyChain
+        NETWORK_PORT: 7557
+        RPC_PORT: 8002
+        RPC_USER: multichainrpc
+        RPC_PASSWORD: violetunicorn
+        RPC_ALLOW_IP: 0.0.0.0/0.0.0.0
+        PARAM_ANYONE_CAN_CONNECT: anyone-can-connect|true
+        PARAM_ANYONE_CAN_CREATE: anyone-can-create|true
+        PARAM_ANYONE_CAN_MINE: anyone-can-mine|true
+        PARAM_ANYONE_CAN_RECEIVE: anyone-can-receive|true
+        PARAM_TARGET_BLOCK_SIZE: target-block-time|30
+slavenode:
+    build: ./templates/node
+    stdin_open: true
+    # tty: true
+    ports:
+        - 7558:7557
+        - 8003:8002
+    environment:
+        CHAINNAME: MyChain
+        NETWORK_PORT: 7557
+        RPC_PORT: 8002
+        RPC_USER: multichainrpc
+        RPC_PASSWORD: violetunicorn
+        RPC_ALLOW_IP: 0.0.0.0/0.0.0.0
+        MASTER_NODE: node-off0
+    links:
+        - node-off0
+    depends_on:
+        - node-off0

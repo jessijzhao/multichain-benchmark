@@ -1,0 +1,99 @@
+TODO:
+- add non-confidential results into presentation
+- add header to measurements
+- plot from startrow only (measure from startrow only?)
+- get rid of test limit (currently only one offchain and one onchain possible)
+- try other models besides linear for prediction
+- try to combine unspent txo
+
+Changes in 1.0:
+- removed confidential data (including everything for Maas)
+- removed commit history as well
+- updated presentation format and README
+
+Changes in 0.7.1:
+- renamed benchmark.py to runTest.py
+- minor edits before temporarily final commit, no changes in functionality
+
+Changes in 0.7:
+- added presentation
+
+Changes in 0.6.4:
+- comparison between 64K and 128K in the works
+- added runs/ to misc/
+
+Changes in 0.6.3:
+- added filter to learnDiskUsage.py for specific txSize only
+- downgraded back to MultiChain alpha 3 version
+- added miscellaneous subdir and more data for 128KB both on and offchain
+- merged predictApprox and predict as well as plot and plotDetailed
+
+Changes in 0.6.2:
+- creating and saving testfiles directory in data instead of parent
+- separate file for plotting the test results
+
+Changes in 0.6.1:
+- fixes in prediction regarding mastersuball
+- added more test data
+
+Changes in 0.6:
+- allows for learning offchain and onchain growth from past tests
+
+Changes in 0.5.1:
+- added (formated) data from past runs
+- added unit flexibility to plotting disk space usage
+- added documentation in approximate disk usage
+
+Changes in 0.5:
+- integrated choice of pseudorandom transaction matrix
+- added preliminary predictions based on yearly transactions
+- added baseimage and updated to Multichain alpha 4 version
+
+Changes in 0.4.2:
+- made detailed disk usage optional, to be toggled on in params.py
+
+Changes in 0.4.1:
+- measuring detailed disk usage of nodes
+- preliminary plotting of detailed disk usage with plotDiskUsage.py
+
+Changes in 0.4:
+- moved helper functions from benchmark.py to helpers.py
+- replaced examples with more recent runs
+- removed center time as a variable
+
+Changes in 0.3.3:
+- streamlined plotting, now supporting a list of durations to plot for
+- updated params.py in the examples to new layout
+- updated README
+- fix: fixed units for lin reg
+- fix2: adjusted runchain.sh from master, fixed issue with measuring chain size
+
+Changes in 0.3.2:
+- added sample extended plots to both examples
+- increased transparency of all lines
+- added README
+
+Changes in 0.3.1:
+- completed rudimentary working version of extending the plot using linreg
+
+Changes in 0.3:
+- plotting uses numpy arrays instead of lists, started working on linreg
+- dynamic use of units for disk space and time
+- parameterized time at which measurements are zeroed
+- fixed accuracy of measurement intervals (again)
+- adjusted runchain.sh and deleted blocknotify.sh
+- updated measurements.csv to new format in examples/testfiles-offchain
+
+Changes in 0.2:
+- changed uuid size to 10 (definitive) instead of 9
+- changed scale of plot from KB to GB
+- fixed accuracy of measurement intervals
+- adjusted pause after stream creation, moved to createStreams()
+- general stylistic clean up
+
+Changes in 0.1:
+- added tail in getMeasurements()
+- adjusted pause after stream creation
+- replaced os.system with subprocess (reading disk size), subprocess.Popen by subprocess.call
+- deleted unneeded imports (json, ast), rearranged
+- cleaned up single/double quotes
