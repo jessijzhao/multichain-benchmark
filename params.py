@@ -37,9 +37,11 @@ testDuration = 600              # min, duration until test terminates
 plotDuration = [0, 365]         # days, duration for which approximate values are plotted (if 0, actual test data)
 measureDelay = 5                # s, time between measurements
 
+
 """
-If setting up a local network in docker containers:
+To set up a local network in docker containers:
 """
+
 host = "this-is-incorrect-replace-this"                 # host address on which docker containers are running
 
 if offchain:
