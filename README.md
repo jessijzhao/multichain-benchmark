@@ -19,4 +19,4 @@ Set parameters in [predictDiskUsage.py](predictDiskUsage.py) and run the file to
 ## Acknowledgments
 The MultiChain network is based on [Kunstmaan's implementation](https://github.com/Kunstmaan/docker-multichain), for license see [here](https://github.com/jessijzhao/multichain-benchmark/blob/master/templates/LICENSE).
 
-Thanks goes to Arne Scherrer for mentorship.
+Thanks goes to Dr. Arne Scherrer for mentorship.
